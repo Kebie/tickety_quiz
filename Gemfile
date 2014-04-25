@@ -1,9 +1,22 @@
 source 'https://rubygems.org'
 
 gem 'devise'
+gem 'thin'
 
-gem 'rspec-rails'
+group :development, :test do
+  gem 'faker'
+  gem 'rspec-rails'
+  gem "factory_girl_rails"
+end
 
+
+group :development do
+  gem 'hirb'
+  gem 'awesome_print'
+  gem 'interactive_editor'
+end
+
+gem 'haml'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -12,6 +25,8 @@ gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
+
+gem 'bootstrap-sass', '~> 3.1.1'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
